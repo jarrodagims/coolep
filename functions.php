@@ -85,7 +85,7 @@ add_shortcode( 'img-directory', function( $atts ){
 
 //add shortcode for wp url
 add_shortcode( 'wpurl', function( $atts ){
-    return site_url();
+    return get_bloginfo('url');
 });
 
 function register_my_menus() {
@@ -334,3 +334,55 @@ function override_mce_options($initArray) {
 	return $initArray;
 }
 add_filter('tiny_mce_before_init', 'override_mce_options');
+
+function novrian_breadcrumbs($sep = '/') {
+	if (!function_exists('yoast_breadcrumb')) {
+	  return null;
+	}
+	// Default Yoast Breadcrumbs Separator
+	$old_sep = '\&raquo\;';
+	// Get the crumbs
+	$crumbs = yoast_breadcrumb(null, null, false);
+	// Hilangkan wrapper <span xmlns:v />
+	$output = preg_replace("/^\<span xmlns\:v=\"http\:\/\/rdf\.data\-vocabulary\.org\/#\"\>/", "", $crumbs);
+	$output = preg_replace("/\<\/span\>$/", "", $output);
+	// Ambil Crumbs
+	$crumb = preg_split("/\40(" . $old_sep . ")\40/", $output);
+	// Manipulasi string output tiap crumbs
+	$crumb = array_map(
+	  create_function('$crumb', '
+		if (preg_match(\'/\<span\40class=\"breadcrumb_last\"/\', $crumb)) {
+		  return \'<li class="active">\' . $crumb . \'</li>\';
+		}
+		return \'<li>\' . $crumb . \' <span class="divider">' . $sep . '</span></li>\';
+		'),
+	  $crumb
+	  );
+	// Bangun output HTML
+	$output = '<div class="breadcrumbs-container" xmlns:v="http://rdf.data-vocabulary.org/#"\><ul class="breadcrumb">' . implode("", $crumb) . '</ul></div>';
+	// Print
+	echo $output;
+  }
+
+  add_filter( 'http_request_host_is_external', '__return_true' );
+
+  /**
+ * Get current page depth
+ *
+ * @return integer
+ */
+function get_current_page_depth(){
+    global $wp_query;
+     
+    $object = $wp_query->get_queried_object();
+    $parent_id  = $object->post_parent;
+    $depth = 0;
+    while($parent_id > 0){
+        $page = get_page($parent_id);
+        $parent_id = $page->post_parent;
+        $depth++;
+    }
+  
+    return $depth;
+}
+ 

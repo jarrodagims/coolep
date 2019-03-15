@@ -1,12 +1,17 @@
-<?php get_header(); ?>
-<?php get_template_part('template-parts/page/page', 'top-banner'); ?>
+<?php get_header();
+
+/*
+Template Name: Page Full Width
+ */
+
+?>
 
 <main role="main">
     <div class="banner-area">
         <div class="container navigation-container">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="main-navigation aos-init aos-animate" data-aos="zoom-in-left">
+                    <ul class="main-navigation" data-aos="zoom-in-left">
                         <li class="dropdown"><a href="<?=SITEURL?>/services" title="Services">Services</a><span><a
                                     class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
                                         aria-hidden="true"></em></a></span>
@@ -144,15 +149,13 @@
             $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
         } ?>
         <div class="subpage-banner-area" <?php if (!empty($backgroundImg)) {?>
-            style="background-image:url('<?php echo $backgroundImg[0]; ?>');" <?php } else { ?>
-            style="background-image:url('<?php echo get_stylesheet_directory_uri();?>/images/banner-default.jpg');"
-            <?php } ?>>
+            style="background-image:url('<?php echo $backgroundImg[0]; ?>');" <?php }?>>
             <div class="subpage-banner-area-container">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center" style="z-index:0;">
-                            <span class="subpage-banner-title aos-init aos-animate" data-aos="fade-down">NOT FOUND
-                            </span>
+                            <span class="subpage-banner-title aos-init aos-animate"
+                                data-aos="fade-down"><?php the_title(); ?></span>
                         </div>
                     </div>
                 </div>
@@ -162,8 +165,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>We're sorry, the page you requested could not be found.</h2>
-                        <p>The requested page has been moved or no longer exists.</p>
+                        <?php the_content(); ?>
                     </div>
                 </div>
             </div>

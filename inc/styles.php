@@ -24,7 +24,11 @@ function sherpa_styles() {
 
 
 	wp_register_style( 'main_css', get_stylesheet_directory_uri() . '/css/style.css', $main_css_deps, (get_option('sherpa_is_dev_mode' == 'y') ? time() : '1.0'), 'all' );
-	wp_enqueue_style( 'main_css' );
+	// wp_enqueue_style( 'main_css' );
+
+	if(is_home() || is_single() || is_archive() || is_tag()) {
+		wp_enqueue_style( 'main_css' );
+	}
 
 }
 
