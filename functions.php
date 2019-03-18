@@ -174,17 +174,6 @@ function my_acf_format_value( $value, $post_id, $field ) {
 
 add_filter('acf/format_value/type=textarea', 'my_acf_format_value', 10, 3);
 
-// Add backend styles for Gutenberg.
-// add_action( 'enqueue_block_editor_assets', 'add_gutenberg_assets' );
-
-// /**
-//  * Load Gutenberg stylesheet.
-//  */
-// function add_gutenberg_assets() {
-// 	// Load the theme styles within Gutenberg.
-// 	wp_enqueue_style( 'gutenberg', get_theme_file_uri( '/css/gutenberg-editor-style.css' ), false );
-// } 
-
 
 function mytheme_block_editor_styles() {
     wp_enqueue_style(
@@ -210,121 +199,8 @@ function my_body_classes( $classes ) {
 	}
 
 	return $classes;
-     
 }
 
-
-// add_filter( 'user_can_richedit', 'custom_user_can_richedit');
-
-// function custom_user_can_richedit($type) {
-//     global $post_type;
-
-//     if ($post_type === 'page')
-//         return false;
-//     return $type;
-// }
-
-/*
-Plugin Name: My Custom Post Types
-Description: Add post types for Floorplans and Floorplan reviews
-Author: Liam Carberry
-*/
- 
-// Hook <strong>lc_custom_post_Floorplan()</strong> to the init action hook
-add_action( 'init', 'lc_custom_post_floorplan' );
- 
-// The custom function to register a Floorplan post type
-function lc_custom_post_Floorplan() {
- 
-  // Set the labels, this variable is used in the $args array
-  $labels = array(
-    'name'               => __( 'Floor Plans' ),
-    'singular_name'      => __( 'Floor Plan' ),
-    'add_new'            => __( 'Add New Floorplan' ),
-    'add_new_item'       => __( 'Add New Floorplan' ),
-    'edit_item'          => __( 'Edit Floorplan' ),
-    'new_item'           => __( 'New Floorplan' ),
-    'all_items'          => __( 'All Floorplans' ),
-    'view_item'          => __( 'View Floorplan' ),
-    'search_items'       => __( 'Search Floorplans' ),
-    'featured_image'     => 'Poster',
-    'set_featured_image' => 'Add Poster'
-  );
- 
-  // The arguments for our post type, to be entered as parameter 2 of register_post_type()
-  $args = array(
-    'labels'            => $labels,
-    'description'       => 'Holds our Floorplans and Floorplan specific data',
-    'public'            => true,
-    'menu_position'     => 5,
-    'supports'          => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments', 'custom-fields', 'page-attributes' ),
-    'has_archive'       => 'floor-plans',
-    'show_in_admin_bar' => true,
-    'show_in_nav_menus' => true,
-	'query_var'         => 'floorplan',
-	'taxonomies'          => array( 'floorplan_categories' )
-  );
- 
-  // Call the actual WordPress function
-  // Parameter 1 is a name for the post type
-  // Parameter 2 is the $args array
-  register_post_type( 'Floorplan', $args);
-}
- 
-
-// hook into the init action and call create_floorplan_taxonomies when it fires
-add_action( 'init', 'create_floorplan_taxonomies', 0 );
-
-// create two taxonomies, genres and writers for the post type "floorplan"
-function create_floorplan_taxonomies() {
-	// Add new taxonomy, make it hierarchical (like categories)
-	$labels = array(
-		'name'              => _x( 'Neighborhoods', 'taxonomy general name', 'textdomain' ),
-		'singular_name'     => _x( 'Neighborhood', 'taxonomy singular name', 'textdomain' ),
-		'search_items'      => __( 'Search Neighborhoods', 'textdomain' ),
-		'all_items'         => __( 'All Neighborhoods', 'textdomain' ),
-		'parent_item'       => __( 'Parent Neighborhood', 'textdomain' ),
-		'parent_item_colon' => __( 'Parent Neighborhood:', 'textdomain' ),
-		'edit_item'         => __( 'Edit Neighborhood', 'textdomain' ),
-		'update_item'       => __( 'Update Neighborhood', 'textdomain' ),
-		'add_new_item'      => __( 'Add New Neighborhood', 'textdomain' ),
-		'new_item_name'     => __( 'New Neighborhood Name', 'textdomain' ),
-		'menu_name'         => __( 'Neighborhood', 'textdomain' ),
-	);
-
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'neighborhood/' , 'with_front' => false),
-		'rewrite'           => array( 'slug' => 'neighborhood' ),
-	);
-
-	
-
-	register_taxonomy( 'neighborhood', array( 'floorplan' ), $args );
-}
-
-function pagination_bar( $custom_query ) {
-
-    $total_pages = $custom_query->max_num_pages;
-    $big = 999999999; // need an unlikely integer
-
-    if ($total_pages > 1){
-        $current_page = max(1, get_query_var('paged'));
-
-        echo paginate_links(array(
-            'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-            'format' => '?paged=%#%',
-            'current' => $current_page,
-			'total' => $total_pages,
-			'prev_text'=> '&lt;',
-			'next_text' => '&gt;'
-        ));
-    }
-}
 
 /* enable uls as children of H tags */
 function override_mce_options($initArray) {
@@ -334,37 +210,6 @@ function override_mce_options($initArray) {
 	return $initArray;
 }
 add_filter('tiny_mce_before_init', 'override_mce_options');
-
-function novrian_breadcrumbs($sep = '/') {
-	if (!function_exists('yoast_breadcrumb')) {
-	  return null;
-	}
-	// Default Yoast Breadcrumbs Separator
-	$old_sep = '\&raquo\;';
-	// Get the crumbs
-	$crumbs = yoast_breadcrumb(null, null, false);
-	// Hilangkan wrapper <span xmlns:v />
-	$output = preg_replace("/^\<span xmlns\:v=\"http\:\/\/rdf\.data\-vocabulary\.org\/#\"\>/", "", $crumbs);
-	$output = preg_replace("/\<\/span\>$/", "", $output);
-	// Ambil Crumbs
-	$crumb = preg_split("/\40(" . $old_sep . ")\40/", $output);
-	// Manipulasi string output tiap crumbs
-	$crumb = array_map(
-	  create_function('$crumb', '
-		if (preg_match(\'/\<span\40class=\"breadcrumb_last\"/\', $crumb)) {
-		  return \'<li class="active">\' . $crumb . \'</li>\';
-		}
-		return \'<li>\' . $crumb . \' <span class="divider">' . $sep . '</span></li>\';
-		'),
-	  $crumb
-	  );
-	// Bangun output HTML
-	$output = '<div class="breadcrumbs-container" xmlns:v="http://rdf.data-vocabulary.org/#"\><ul class="breadcrumb">' . implode("", $crumb) . '</ul></div>';
-	// Print
-	echo $output;
-  }
-
-  add_filter( 'http_request_host_is_external', '__return_true' );
 
   /**
  * Get current page depth
