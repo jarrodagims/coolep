@@ -142,7 +142,8 @@
             $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
         } ?>
         <div class="subpage-banner-area" <?php if (!empty($backgroundImg)) {?>
-            style="background-image:url('<?php echo $backgroundImg[0]; ?>');" <?php }?>>
+            style="background-image:url('<?php echo $backgroundImg[0]; ?>');" <?php } else { ?>
+            style="background-image:url('https://www.coolelpaso.com/files/html_pages4.jpg');" <?php } ?>>
             <div class="subpage-banner-area-container">
                 <div class="container">
                     <div class="row">
