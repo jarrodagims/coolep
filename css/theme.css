@@ -183,6 +183,12 @@ ul.main-navigation li{font-size:1.4em;}
 }
 @media (min-width:1200px){.carousel-caption{right:12%;max-width:400px;}
 }
+h2 ul#collapse li {
+    list-style: none;
+    margin-bottom: 1em;
+    font-size: 18px;
+    margin-left: -35px;
+}
 span.subpage-banner-title {
     color: #FFFFFF;
     border-bottom: 1px solid #834d00;
@@ -194,6 +200,69 @@ span.subpage-banner-title {
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
+}
+.content-additional-one {
+    padding-bottom: 3em;
+    background-color: #557345;
+}
+.content-additional-one h2 {
+    color: #fff;
+    margin: 1.5em 0 1em 0;
+    font-size: 40px;
+    font-style: italic;
+}
+.content-additional-one p {
+    color: #fff;
+    font-size: 18px;
+}
+ img#who{
+    margin: 8em 0 0 2em;
+}
+.content-additional-two {
+    padding-bottom: 3em;
+    background-color: #FFF;
+}
+.content-additional-two h2 {
+    margin: 1.5em 0 1em 0;
+    font-size: 40px;
+    font-style: italic;
+}
+.content-additional-two p {
+    font-size: 18px;
+}
+ul#buckets {
+    font-size: 18px;
+    margin: 2em 0;
+}
+#buckets li {
+    margin-bottom: 1.5em;
+    list-style-image: url(https://www.coolelpaso.com/wp-content/themes/coolep/img/arrow.png);
+}
+#buckets li a {
+    color: #000;
+}
+.content-contact {
+    color: #fff;
+    background: url(https://www.coolelpaso.com/wp-content/themes/coolep/img/bg-home-content.jpg) top center no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 7em;
+}
+.content-contact .container {
+    padding-top: 3em;
+}
+.content-contact h2 {
+    color: #fff;
+    margin: 1.5em 0 1em 0;
+    font-size: 40px;
+    font-style: italic;
+}
+.content-contact p {
+    font-size: 18px;
+}
+.content-contact a.header-contact-button.aos-init.aos-animate {
+    background-color: #3c3c3c;
+    width: 35%;
 }
 
 .blog section#header {

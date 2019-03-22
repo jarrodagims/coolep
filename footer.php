@@ -35,8 +35,7 @@
                     alt="Barrett Airworks">
             </div>
             <div class="col-md-3">
-                <p class="credit">designed by <a href="https://www.stantonstreet.com/" target="_blank"
-                        title="stantonstreet">stantonstreet</a>.</p>
+
                 <a href="https://www.carrier.com/residential/en/us/find-a-dealer/schedule-now/?zipcode=79905&amp;dealerId=9002293&amp;country=USA&amp;utm_content=dealersite"
                     target="_blank" class="footer-schedule-button aos-init" data-aos="fade-up">Schedule Now</a>
             </div>

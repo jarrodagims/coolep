@@ -5,62 +5,33 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="main-navigation" data-aos="zoom-in-left">
-                        <li class="dropdown"><a href="<?=SITEURL?>/services" title="Services">Services</a><span><a
-                                    class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
+                        <li><a href="/" class="external" title="Blog" target="_blank">Home</a></li>
+                        <li class="dropdown"><a href="<?=SITEURL?>/about" title="About">About</a><span><a
+                                    class="mobile-toggle" href="<?=SITEURL?>/#"><em class="fa fa-chevron-down"
                                         aria-hidden="true"></em></a></span>
                             <ul class="sub-menu">
                                 <li class="newsubmenu">
-                                    <a href="<?=SITEURL?>/services/commercial" title="Commercial">Commercial</a>
+                                    <a href="<?=SITEURL?>/faqs" title="Faqs">FAQs</a>
                                     <ul class="submenu-level2"></ul>
                                 </li>
                                 <li class="newsubmenu">
-                                    <a href="<?=SITEURL?>/services/heating" title="Heating">Heating</a>
+                                    <a href="<?=SITEURL?>/blog" title="Blog">Blog</a>
                                     <ul class="submenu-level2"></ul>
                                 </li>
                                 <li class="newsubmenu">
-                                    <a href="<?=SITEURL?>/services/cooling" title="Cooling">Cooling</a>
+                                    <a href="<?=SITEURL?>/testimonials" title="Testimonials">Testimonials</a>
                                     <ul class="submenu-level2"></ul>
-                                </li>
-                                <li class="newsubmenu">
-                                    <a href="<?=SITEURL?>/services/plumbing" title="Plumbing">Plumbing</a> <span><a
-                                            class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
-                                                aria-hidden="true"></em></a></span>
-                                    <ul class="submenu-level2">
-                                        <li><a href="<?=SITEURL?>/services/plumbing/emergency-plumbing-drain-repair"
-                                                title="Emergency Plumbing Drain Repair">Emergency Plumbing Drain
-                                                Repair</a></li>
-                                    </ul>
-                                </li>
-                                <li class="newsubmenu">
-                                    <a href="<?=SITEURL?>/services/other-services" title="Other Services">Other
-                                        Services</a>
-                                    <span><a class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
-                                                aria-hidden="true"></em></a></span>
-                                    <ul class="submenu-level2">
-                                        <li><a href="<?=SITEURL?>/services/other-services/duct-sealing"
-                                                title="Duct Sealing">Duct
-                                                Sealing</a></li>
-                                        <li><a href="<?=SITEURL?>/services/other-services/air-duct-cleaning-system"
-                                                title="Air Duct Cleaning System">Air Duct Cleaning System</a></li>
-                                        <li><a href="<?=SITEURL?>/services/other-services/environmental-testing"
-                                                title="Environmental Testing">Environmental Testing</a></li>
-                                        <li><a href="<?=SITEURL?>/services/other-services/home-energy-audit"
-                                                title="Home Energy Audit">Home Energy Audit</a></li>
-                                        <li><a href="<?=SITEURL?>/services/other-services/indoor-air-quality"
-                                                title="Indoor Air Quality">Indoor Air Quality</a></li>
-                                    </ul>
                                 </li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="<?=SITEURL?>/products" title="Products">Products</a><span><a
-                                    class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
+                                    class="mobile-toggle" href="<?=SITEURL?>/#"><em class="fa fa-chevron-down"
                                         aria-hidden="true"></em></a></span>
                             <ul class="sub-menu">
                                 <li class="newsubmenu">
                                     <a href="<?=SITEURL?>/products/air-conditioners" title="Air Conditioners">Air
-                                        Conditioners</a>
-                                    <span><a class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
-                                                aria-hidden="true"></em></a></span>
+                                        Conditioners</a> <span><a class="mobile-toggle" href="<?=SITEURL?>/#"><em
+                                                class="fa fa-chevron-down" aria-hidden="true"></em></a></span>
                                     <ul class="submenu-level2">
                                         <li><a href="<?=SITEURL?>/products/air-conditioners/infinity-series-central-air-conditioner"
                                                 title="Infinity® Series Central Air Conditioner">Infinity® Series
@@ -77,8 +48,8 @@
                                     </ul>
                                 </li>
                                 <li class="newsubmenu">
-                                    <a href="<?=SITEURL?>/products/furnaces" title="Furnaces">Furnaces</a> <span><a
-                                            class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
+                                    <a href="<?=SITEURL?>/products/furnaces" title="Furnaces">Furnaces</a>
+                                    <span><a class="mobile-toggle" href="<?=SITEURL?>/#"><em class="fa fa-chevron-down"
                                                 aria-hidden="true"></em></a></span>
                                     <ul class="submenu-level2">
                                         <li><a href="<?=SITEURL?>/products/furnaces/infinity-gas-furnace-with-greenspeed-intelligence"
@@ -88,30 +59,26 @@
                                                 title="Performance™ Series Gas Furnaces">Performance™ Series Gas
                                                 Furnaces</a></li>
                                         <li><a href="<?=SITEURL?>/products/furnaces/comfort-series-gas-furnaces"
-                                                title="Comfort™ Series Gas Furnaces">Comfort™ Series Gas Furnaces</a>
-                                        </li>
+                                                title="Comfort™ Series Gas Furnaces">Comfort™ Series Gas
+                                                Furnaces</a></li>
                                     </ul>
                                 </li>
                                 <li class="newsubmenu">
                                     <a href="<?=SITEURL?>/products/thermostats" title="Thermostats">Thermostats</a>
-                                    <span><a class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
+                                    <span><a class="mobile-toggle" href="<?=SITEURL?>/#"><em class="fa fa-chevron-down"
                                                 aria-hidden="true"></em></a></span>
                                     <ul class="submenu-level2">
                                         <li><a href="<?=SITEURL?>/products/thermostats/cr-thermostat"
-                                                title="Côr Thermostat">Côr
-                                                Thermostat</a></li>
+                                                title="Côr Thermostat">Côr Thermostat</a></li>
                                     </ul>
                                 </li>
                                 <li class="newsubmenu">
                                     <a href="<?=SITEURL?>/products/hot-water-heaters" title="Hot Water Heaters">Hot
-                                        Water
-                                        Heaters</a> <span><a class="mobile-toggle" href="#"><em
+                                        Water Heaters</a> <span><a class="mobile-toggle" href="<?=SITEURL?>/#"><em
                                                 class="fa fa-chevron-down" aria-hidden="true"></em></a></span>
                                     <ul class="submenu-level2">
                                         <li><a href="<?=SITEURL?>/products/hot-water-heaters/tank-water-heating"
                                                 title="Tank Water Heating">Tank Water Heating</a></li>
-                                        <li><a href="<?=SITEURL?>/products/hot-water-heaters/tankless-water-heating"
-                                                title="Tankless Water Heating">Tankless Water Heating</a></li>
                                         <li><a href="<?=SITEURL?>/products/hot-water-heaters/solar-water-heating"
                                                 title="Solar Water Heating">Solar Water Heating</a></li>
                                         <li><a href="<?=SITEURL?>/products/hot-water-heaters/commercial-water-heaters"
@@ -120,20 +87,99 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="<?=SITEURL?>/financing" title="Financing">Financing</a></li>
-                        <li><a href="<?=SITEURL?>/faqs" title="FAQs">FAQs</a></li>
-                        <li class="dropdown"><a href="<?=SITEURL?>/about" title="About">About</a><span><a
-                                    class="mobile-toggle" href="#"><em class="fa fa-chevron-down"
+                        <li class="dropdown"><a href="<?=SITEURL?>/heating/" title="Heating">Heating</a><span><a
+                                    class="mobile-toggle" href="<?=SITEURL?>/#"><em class="fa fa-chevron-down"
                                         aria-hidden="true"></em></a></span>
                             <ul class="sub-menu">
                                 <li class="newsubmenu">
-                                    <a href="<?=SITEURL?>/testimonials" title="Testimonials">Testimonials</a>
+                                    <a href="<?=SITEURL?>/heater-installation-el-paso/"
+                                        title="Heater Installation">Heater Installation</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/heater-repairs-el-paso/" title="Heater Repairs">Heater
+                                        Repairs</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/heater-maintenance-el-paso/" title="Heater Maintenance">Heater
+                                        Maintenance</a>
                                     <ul class="submenu-level2"></ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="https://blog.coolelpaso.com/" class="external" title="Blog"
-                                target="_blank">Blog</a></li>
+                        <li class="dropdown"><a href="<?=SITEURL?>/cooling/" title="cooling">Cooling</a><span><a
+                                    class="mobile-toggle" href="<?=SITEURL?>/#"><em class="fa fa-chevron-down"
+                                        aria-hidden="true"></em></a></span>
+                            <ul class="sub-menu">
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/refrigerated-air-el-paso/" title="AC Installation">AC
+                                        Installation</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>air-conditioning-repair-el-paso/" title="AC Repairs">AC
+                                        Repairs</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/air-conditioning-service-el-paso/" title="AC Maintenance">AC
+                                        Maintenance</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="<?=SITEURL?>/commercial" class="external" title="Commercial HVAC"
+                                target="_blank">Commercial</a></li>
+                        <li class="dropdown"><a href="<?=SITEURL?>/plumbing/" title="cooling">Plumbing</a><span><a
+                                    class="mobile-toggle" href="<?=SITEURL?>/#"><em class="fa fa-chevron-down"
+                                        aria-hidden="true"></em></a></span>
+                            <ul class="sub-menu">
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/emergency-plumbing-drain-repair/"
+                                        title="Emergency Plumbing Drain Repair">Emergency Plumbing Drain Repair</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/tankless-water-heating/" title="AC Maintenance">Tankless Water
+                                        Heaters</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a href="<?=SITEURL?>/other-services/" title="Other Services">Other
+                                Services</a><span><a class="mobile-toggle" href="<?=SITEURL?>/#"><em
+                                        class="fa fa-chevron-down" aria-hidden="true"></em></a></span>
+                            <ul class="sub-menu">
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/air-duct-cleaning-system/"
+                                        title="Air Duct Cleaning System">Air Duct Cleaning System</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/environmental-testing/"
+                                        title="Environmental Testing">Environmental Testing</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/home-energy-audit/" title="Home Energy Audit">Home Energy
+                                        Audit</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/indoor-air-quality/" title="Indoor Air Quality">Indoor Air
+                                        Quality</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                                <li class="newsubmenu">
+                                    <a href="<?=SITEURL?>/electrical-services-el-paso"
+                                        title="Electrical Services">Electrical Services</a>
+                                    <ul class="submenu-level2"></ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="<?=SITEURL?>/financing" title="Financing">Financing</a></li>
+                        <li><a href="<?=SITEURL?>/contact-us" title="Financing">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -143,7 +189,8 @@
         } ?>
         <div class="subpage-banner-area" <?php if (!empty($backgroundImg)) {?>
             style="background-image:url('<?php echo $backgroundImg[0]; ?>');" <?php } else { ?>
-            style="background-image:url('https://www.coolelpaso.com/files/html_pages4.jpg');" <?php } ?>>
+            style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/files/html_pages4.jpg');"
+            <?php } ?>>
             <div class="subpage-banner-area-container">
                 <div class="container">
                     <div class="row">
