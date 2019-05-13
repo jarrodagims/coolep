@@ -20,7 +20,7 @@
                 $thumb_url = $thumb_url_array[0];
 
                 if(empty($thumb_url) || $thumb_url == SITEURL . '/wp-includes/images/media/default.png')  {
-                    $thumb_url = get_stylesheet_directory_uri() . '/img/placeholder.png';
+                    $thumb_url = '/wp-content/uploads/2019/03/blog-pic.jpg';
                 }
 
 			endif;
@@ -38,7 +38,7 @@
 <?php
 			endif;
 			echo '<h3><a href="' . $permalink . '">';
-            echo short_title('...', 5);
+            echo the_title();
             echo '</a>' . $edit_link . '</h3>';
             echo '<p>';
             sherpa_excerpt();
