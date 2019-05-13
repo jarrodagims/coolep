@@ -3,7 +3,7 @@
 	function bs_menu($is_responsive = TRUE, $theme_location = 'primary', $menu_side = 'left', $brand = NULL, $rightNav = NULL) {
     	ob_start();
     	?>
-<nav class="navbar navbar-sherpa navbar-dark  <?php if(!is_front_page()) : ?>navbar-expand-lg<?php endif; ?>">
+<nav class="navbar navbar-sherpa navbar-dark  navbar-expand-lg">
     <?php
 		if($is_responsive == TRUE) {
 			$collapse_id = rand(1,99);
@@ -20,7 +20,7 @@
         <?php
 		}
 
-		$menu_classes = "nav navbar-nav";
+		$menu_classes = "main-navigation aos-init aos-animate";
 		if($menu_side == 'right'):
 		    $menu_classes .= ' navbar-right';
         endif;
