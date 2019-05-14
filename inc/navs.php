@@ -3,7 +3,7 @@
 	function bs_menu($is_responsive = TRUE, $theme_location = 'primary', $menu_side = 'left', $brand = NULL, $rightNav = NULL) {
     	ob_start();
     	?>
-<nav class="navbar navbar-sherpa navbar-dark  navbar-expand-lg">
+<nav class="navbar navbar-sherpa navbar-dark navbar-expand-md navbar-expand-lg">
     <?php
 		if($is_responsive == TRUE) {
 			$collapse_id = rand(1,99);
@@ -27,7 +27,7 @@
 
 		$args = array(
 			'theme_location'	=> $theme_location,
-			'depth'				=> 2,
+			'depth'				=> 3,
 			'menu_class'		=> $menu_classes,
 			'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 			'walker'            => new wp_bootstrap_navwalker()
